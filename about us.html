@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,90 +6,149 @@
   <title>About Me | Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Poppins", Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #e3f2f2;
       color: #333;
     }
-    header {
-      background: linear-gradient(135deg, #9bc4c2, #70a9a1);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-      border-bottom: 5px solid #568d87;
-    }
     nav {
       background-color: #70a9a1;
-      padding: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: white;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-    .container {
-      padding: 20px;
-      max-width: 1100px;
+    nav a:hover {
+      color: #e0fffa;
+    }
+    header {
+      background: linear-gradient(135deg, #9bc4c2, #70a9a1);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+      border-bottom: 5px solid #568d87;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
       margin: auto;
     }
-    h1, h2 {
-      color: #204e4e;
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .section {
-      margin-bottom: 30px;
+    .profile {
+      text-align: center;
+      margin-bottom: 60px;
     }
-    .card {
-      background: white;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .profile-pic {
+    .profile img {
       width: 180px;
       border-radius: 50%;
-      display: block;
-      margin: 10px auto;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
+    }
+    .profile p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+    .skill-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .skill-card h3 {
+      color: #204e4e;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #568d87;
+      color: white;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <div class="logo">My Portfolio</div>
     <div>
-      <a href="about.html">About Me</a>
+      <a href="index.html">About Me</a>
       <a href="projects.html">Projects</a>
     </div>
   </nav>
 
   <header>
-    <h1>Welcome to My Portfolio</h1>
-    </header>
+    <h1>About Me</h1>
+    <p>Where creativity meets logic — the story behind my journey.</p>
+  </header>
 
   <div class="container">
-    <div class="section">
-      <h1>About Me</h1>
-      <div class="card">
-        <img src="https://image2url.com/images/1764166951472-f3ddb081-23b5-47b5-b9de-18b41e2f5f3f.jpg" alt="My Photo" class="profile-pic" />
-        <p>Hello! I’m a passionate and creative Computer Science student with a deep love for problem-solving and design. I enjoy transforming ideas into digital solutions through programming and innovative thinking. I’m driven by curiosity and the desire to learn new technologies that enhance my abilities. My work style is focused yet imaginative, always aiming to create something meaningful and aesthetically appealing. Outside coding, I enjoy art, reading, and activities that inspire creativity and balance.</p>
-      </div>
+    <section class="profile">
+      <img src="https://image2url.com/images/1764166951472-f3ddb081-23b5-47b5-b9de-18b41e2f5f3f.jpg" alt="My Photo">
+      <p>Hello! I’m a passionate and creative Computer Science student with a deep love for problem-solving and design. I enjoy transforming ideas into digital solutions through programming and innovative thinking. My work style is focused yet imaginative, always aiming to create something meaningful and aesthetically appealing.</p>
+    </section>
 
-      <div class="card">
-        <h2>Skills & Interests</h2>
-        <ul>
-          <li>Proficient in C, C++, and Web Development</li>
-          <li>Strong problem-solving and adaptability</li>
-          <li>Digital Art, Painting, and Sketching</li>
-          <li>Reading, Chess, and Creative Writing</li>
-        </ul>
+    <section>
+      <h2 style="text-align:center; color:#204e4e;">Skills & Interests</h2>
+      <div class="skills">
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <p>Proficient in C, C++, and Web Development. I build functional and creative solutions across platforms.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Problem Solving</h3>
+          <p>Strong analytical mindset, adaptable to challenges, with a focus on efficient and elegant solutions.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Creativity</h3>
+          <p>Digital art, painting, and sketching help me express ideas visually and bring balance to technical work.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Hobbies</h3>
+          <p>Reading, chess, and creative writing — activities that keep me inspired and sharpen my perspective.</p>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
+
+  <footer>
+    © 2025 My Portfolio </footer>
+
 </body>
 </html>
